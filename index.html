@@ -1,0 +1,429 @@
+<!doctype html>
+<html lang="zh-hant-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Looko</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <div class="logo">
+        <a href="">
+          <img src="image/looko_logo.png" alt="" />
+        </a>
+        <div class="menu-icon"><i class="fa-solid fa-bars"></i></div>
+      </div>
+      <div>
+        <nav class="navbar">
+          <ul>
+            <li><a href="">地區分類</a></li>
+            <li><a href="">主題情境</a></li>
+            <li><a href="">聯絡我們</a></li>
+
+            <li class="mobile-only"><a href="">我的營地小房間</a></li>
+            <li class="mobile-only"><a href="">喜歡的營地</a></li>
+            <li class="mobile-only"><a href="">會員登入</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="key-icons">
+        <ul>
+          <li>
+            <a href=""><i class="fa-solid fa-door-closed"></i></a>
+          </li>
+          <li>
+            <a href=""><i class="fa-solid fa-heart"></i></a>
+          </li>
+          <li>
+            <a href=""><i class="fa-solid fa-user"></i></a>
+          </li>
+        </ul>
+      </div>
+    </header>
+    <section class="banner">
+      <div class="banner-content">
+        <h1>Welcome!</h1>
+        <p>
+          下一個目的地在哪？現在就邀請好友， 讓 Looko
+          為妳打點好所有瑣碎，輕鬆出發！
+        </p>
+      </div>
+      <div class="search-container">
+        <input
+          type="radio"
+          id="tab1"
+          name="search-switch"
+          checked
+          style="display: none"
+        />
+        <input
+          type="radio"
+          id="tab2"
+          name="search-switch"
+          style="display: none"
+        />
+
+        <div class="search-tabs">
+          <label for="tab1" class="tab-btn">出發日搜尋</label>
+          <span>|</span>
+          <label for="tab2" class="tab-btn">營地搜尋</label>
+        </div>
+        <!-- <div class="search-bar" id="date-search"></div> -->
+        <div class="search-bar" id="camp-search">
+          <input
+            type="text"
+            id="camp-search"
+            placeholder="請輸入營地名稱"
+            class="camp-input"
+          />
+          <button class="search-btn">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+        </div>
+
+        <div class="search-bar" id="date-search">
+          <div class="search-item">
+            <label for="check-in">入住日期</label>
+            <input type="date" id="check-in " />
+          </div>
+          <span></span>
+          <div class="search-item">
+            <label for="city">縣市</label>
+            <select name="city">
+              <option value="none">不拘</option>
+              <option value="north">北部</option>
+              <option value="central">中部</option>
+              <option value="south">南部</option>
+              <option value="east">東部</option>
+            </select>
+          </div>
+          <span></span>
+          <div class="search-item">
+            <label for="">天數</label>
+            <select name="day">
+              <option value="1night">1晚</option>
+              <option value="2night">2晚</option>
+              <option value="3night">3晚</option>
+              <option value="4night">4晚</option>
+              <option value="5night">5晚</option>
+            </select>
+          </div>
+          <span></span>
+          <div class="search-item">
+            <label for="">帳數</label>
+            <select name="tents" id="">
+              <option value="1">1帳</option>
+              <option value="2">2帳</option>
+              <option value="3">3帳</option>
+              <option value="4">4帳</option>
+              <option value="5">5帳</option>
+            </select>
+          </div>
+          <span></span>
+          <div class="search-item">
+            <label for="">海拔</label>
+            <select name="mountain-hight" id="">
+              <option value="none">不拘</option>
+              <option value="over1000">高海拔(1000以上)</option>
+              <option value="lower1000">低海拔(1000以下)</option>
+            </select>
+          </div>
+          <span></span>
+          <div class="search-item">
+            <label for="">主題情境</label>
+            <select name="theme" id="">
+              <option value="none">不拘</option>
+              <option value="none-playground">無遊戲區</option>
+              <option value="playground">遊戲區</option>
+              <option value="river">野溪</option>
+              <option value="hotspring">溫泉</option>
+              <option value="hiking">登山路線</option>
+              <option value="oldstreet">老街景點</option>
+            </select>
+          </div>
+          <button class="search-btn">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+        </div>
+      </div>
+    </section>
+    <section class="recommend">
+      <h1>營地推薦</h1>
+      <div class="container">
+        <button class="arrow"><i class="fa-solid fa-angle-left"></i></button>
+        <div class="camp-window">
+          <div class="camp-list">
+            <div class="camp-place">
+              <div class="camp-place-img">
+                <input
+                  type="radio"
+                  name="slider-control-1"
+                  id="c1-pic-1"
+                  checked
+                />
+                <input type="radio" name="slider-control-1" id="c1-pic-2" />
+                <input type="radio" name="slider-control-1" id="c1-pic-3" />
+                <div class="image-slider">
+                  <img
+                    class="img-unit"
+                    src="image/campplace1.jpg"
+                    alt="營地照片1"
+                  />
+                  <img
+                    class="img-unit"
+                    src="image/campplace2.jpg"
+                    alt="營地照片2"
+                  />
+                  <img
+                    class="img-unit"
+                    src="image/campplace3.jpg"
+                    alt="營地照片3"
+                  />
+                </div>
+                <div class="slider-dots">
+                  <label for="c1-pic-1" class="dot"></label>
+                  <label for="c1-pic-2" class="dot"></label>
+                  <label for="c1-pic-3" class="dot"></label>
+                </div>
+              </div>
+              <div class="camp-place-info">
+                <div class="info">
+                  <div class="detailed">
+                    <div class="camp-name">
+                      <h4>好風景營地</h4>
+                      <button>4.9 極好</button>
+                    </div>
+                    <div class="city">
+                      <p>苗栗縣</p>
+                      <p>1000 m</p>
+                    </div>
+                  </div>
+                  <div class="heart"><i class="fa-regular fa-heart"></i></div>
+                </div>
+                <div class="info-button">
+                  <button class="addtoroom-btn">加入營地小房間</button>
+                  <button class="booking-btn">立即訂位</button>
+                </div>
+              </div>
+            </div>
+            <div class="camp-place">
+              <div class="camp-place-img">
+                <input
+                  type="radio"
+                  name="slider-control-2"
+                  id="c2-pic-1"
+                  checked
+                />
+                <input type="radio" name="slider-control-2" id="c2-pic-2" />
+                <input type="radio" name="slider-control-2" id="c2-pic-3" />
+                <div class="image-slider">
+                  <img
+                    class="img-unit"
+                    src="image/campplace5.jpg"
+                    alt="營地照片1"
+                  />
+                  <img
+                    class="img-unit"
+                    src="image/campplace4.jpg"
+                    alt="營地照片2"
+                  />
+                  <img
+                    class="img-unit"
+                    src="image/campplace6.jpg"
+                    alt="營地照片3"
+                  />
+                </div>
+                <div class="slider-dots">
+                  <label for="c2-pic-1" class="dot"></label>
+                  <label for="c2-pic-2" class="dot"></label>
+                  <label for="c2-pic-3" class="dot"></label>
+                </div>
+              </div>
+              <div class="camp-place-info">
+                <div class="info">
+                  <div class="detailed">
+                    <div class="camp-name">
+                      <h4>麒麟山露營區</h4>
+                      <button>4.5 很好</button>
+                    </div>
+                    <div class="city">
+                      <p>苗栗縣</p>
+                      <p>850 m</p>
+                    </div>
+                  </div>
+                  <div class="heart"><i class="fa-regular fa-heart"></i></div>
+                </div>
+                <div class="info-button">
+                  <button class="addtoroom-btn">加入營地小房間</button>
+                  <button class="booking-btn">立即訂位</button>
+                </div>
+              </div>
+            </div>
+            <div class="camp-place">
+              <div class="camp-place-img">
+                <input
+                  type="radio"
+                  name="slider-control-3"
+                  id="c3-pic-1"
+                  checked
+                />
+                <input type="radio" name="slider-control-3" id="c3-pic-2" />
+                <input type="radio" name="slider-control-3" id="c3-pic-3" />
+                <div class="image-slider">
+                  <img
+                    class="img-unit"
+                    src="image/campplace11.jpg"
+                    alt="營地照片1"
+                  />
+                  <img
+                    class="img-unit"
+                    src="image/campplace8.jpg"
+                    alt="營地照片2"
+                  />
+                  <img
+                    class="img-unit"
+                    src="image/campplace9.jpg"
+                    alt="營地照片3"
+                  />
+                </div>
+                <div class="slider-dots">
+                  <label for="c3-pic-1" class="dot"></label>
+                  <label for="c3-pic-2" class="dot"></label>
+                  <label for="c3-pic-3" class="dot"></label>
+                </div>
+              </div>
+              <div class="camp-place-info">
+                <div class="info">
+                  <div class="detailed">
+                    <div class="camp-name">
+                      <h4>穎達露營區</h4>
+                      <button>4.9 極好</button>
+                    </div>
+                    <div class="city">
+                      <p>桃源區</p>
+                      <p>500 m</p>
+                    </div>
+                  </div>
+                  <div class="heart"><i class="fa-regular fa-heart"></i></div>
+                </div>
+                <div class="info-button">
+                  <button class="addtoroom-btn">加入營地小房間</button>
+                  <button class="booking-btn">立即訂位</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="arrow"><i class="fa-solid fa-angle-right"></i></button>
+      </div>
+    </section>
+
+    <section class="area">
+      <h1>地區分類</h1>
+      <div class="area-container">
+        <a href="#" class="area-item">
+          <img src="image/campplace16.JPG" alt="" />
+          <div class="area-text">北部</div>
+        </a>
+        <a href="#" class="area-item">
+          <img src="image/campplace13.jpg" alt="" />
+          <div class="area-text">中部</div></a
+        ><a href="#" class="area-item">
+          <img src="image/campplace14.JPG" alt="" />
+          <div class="area-text">南部</div></a
+        ><a href="#" class="area-item">
+          <img src="image/campplace15.jpg" alt="" />
+          <div class="area-text">東部</div>
+        </a>
+      </div>
+    </section>
+    <section class="topic">
+      <h1>主題情境</h1>
+      <div class="topic-container">
+        <div class="topic-btn">
+          <button class="theme-btn">
+            <div class="btn-content">
+              <i class="fa-solid fa-up-long"></i>
+              <div class="topic-text">
+                <span>高海拔</span>
+                <p>(1000以上)</p>
+              </div>
+            </div>
+          </button>
+          <button class="theme-btn">
+            <div class="btn-content">
+              <i class="fa-solid fa-down-long"></i>
+              <div class="topic-text">
+                <span>低海拔 </span>
+                <p>(1000以下)</p>
+              </div>
+            </div>
+          </button>
+          <button class="theme-btn">
+            <div class="btn-content">
+              <i class="fa-solid fa-x"></i><span>無遊戲區</span>
+            </div>
+          </button>
+          <button class="theme-btn">
+            <div class="btn-content">
+              <i class="fa-solid fa-o"></i><span>有遊戲區</span>
+            </div>
+          </button>
+        </div>
+        <div class="topic-btn">
+          <button>
+            <div class="btn-content">
+              <i class="fa-solid fa-person-swimming"></i><span>野溪</span>
+            </div>
+          </button>
+          <button>
+            <div class="btn-content">
+              <i class="fa-solid fa-water"></i>
+              <span>溫泉</span>
+            </div>
+          </button>
+          <button>
+            <div class="btn-content">
+              <i class="fa-solid fa-person-hiking"></i><span>登山路線</span>
+            </div>
+          </button>
+          <button>
+            <div class="btn-content">
+              <i class="fa-solid fa-signs-post"></i><span>老街景點</span>
+            </div>
+          </button>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="footer">
+        <div class="contact-info">
+          <span class="tell">
+            <span><i class="fa-solid fa-phone"></i></span>
+            <span>09-66200951</span>
+          </span>
+          <span class="address">
+            <span><i class="fa-solid fa-location-dot"></i></span>
+            <span>臺北市大安區光復南路24號</span>
+          </span>
+          <span class="mail">
+            <span><i class="fa-solid fa-envelope"></i></span>
+            <span>service@looko.com.tw</span>
+          </span>
+        </div>
+        <div class="midea">
+          <a href="" class="insta"><i class="fa-brands fa-instagram"></i></a>
+          <a href="" class="facebook"><i class="fa-brands fa-facebook"></i></a>
+          <a href="" class="line"><i class="fa-brands fa-line"></i></a>
+        </div>
+        <hr />
+        <p class="company">&copy; 2026 露可營地共編平台Looko outdoor LTD.</p>
+      </div>
+    </footer>
+  </body>
+</html>
