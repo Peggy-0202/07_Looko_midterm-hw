@@ -233,6 +233,11 @@ input {
 #tab1:checked ~ #date-search {
   display: flex;
 }
+
+body:has(#tab2:checked) .recommend h1 {
+  margin-top: 150px;
+}
+
 #tab2:checked ~ #camp-search {
   display: flex;
 }
@@ -551,8 +556,8 @@ input {
   font-size: 24px;
   width: 30px;
 }
-.topic-btn button:hover{
-  background-color:#c7370f;
+.topic-btn button:hover {
+  background-color: #c7370f;
   color: #f3f2ed;
   border: 2px solid #c7370f;
   transition: all 0.3s ease;
@@ -591,12 +596,12 @@ input {
 }
 hr {
   display: flex;
-  margin: 50px auto;
+  margin: 80px auto 20px;
   width: 80%;
   border: none;
   border-top: 0.5px solid lightslategray;
 }
-.company{
+.company {
   font-size: 12px;
   color: lightslategray;
   display: flex;
@@ -612,15 +617,16 @@ hr {
     cursor: pointer;
   }
   .header {
-    height: 350px;
+    height: 80px;
+    width: 100%;
     /* flex-wrap: wrap; */
     border-bottom: none;
     position: relative;
-    padding: 0 20px;
     justify-content: space-between;
-    z-index: 10;
     padding: 10px 20px;
-    flex-direction: column;
+    flex-direction: row;
+    display: flex;
+    align-items: center;
   }
   .banner {
     height: 350px;
@@ -642,6 +648,7 @@ hr {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    z-index: 20;
   }
   .logo img {
     height: 100%;
@@ -649,14 +656,26 @@ hr {
   }
   .navbar {
     width: 100%;
+    display: none;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    background-color: #f3f2ed;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    z-index: 15;
+  }
+  #menu-control:checked ~ .navbar {
+    display: block;
   }
   .navbar ul {
     flex-direction: column;
     width: 100%;
-    padding: 0;
+    align-items: center;
+    padding: 20px 0;
     margin: 0;
   }
-  .key-icons i {
+  .key-icons {
     display: none;
   }
   .navbar ul > li > a {
@@ -686,6 +705,7 @@ hr {
   .search-tabs label {
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
   }
+
   .search-bar {
     width: 95%;
     height: auto;
@@ -696,6 +716,7 @@ hr {
     padding: 20px 15px;
     gap: 12px 8px;
   }
+
   .search-item {
     width: calc(50% - 4px);
     height: 60px;
@@ -794,7 +815,7 @@ hr {
     width: 15px;
     flex-shrink: 0;
   }
-  .topic{
+  .topic {
     height: 550px;
   }
   .topic-btn {
@@ -822,12 +843,12 @@ hr {
   .btn-content span {
     letter-spacing: 1px;
   }
-  .contact-info{
+  .contact-info {
     flex-direction: column;
     gap: 20px;
   }
-  hr{
-    margin:40px auto 10px ;
+  hr {
+    margin: 40px auto 10px;
     /* margin-top: 30px; */
     width: 90%;
   }
